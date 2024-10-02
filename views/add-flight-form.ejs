@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Add flight</title>
+</head>
+<body>
+    <header>
+        <h1>add-flight-form</h1>
+    </header>
+
+    <form action="/api/add-flight" method="POST">
+        <label for="from">From</label>
+        <input type="text" id="from" name="from" required>
+
+        <label for="date">Date:</label>
+        <input type="text" id="to" name="to" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required>
+
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company" required>
+
+        <button type="submit">Add flight</button>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Flights</title>
+</head>
+<body>
+
+    <%- include('./includes/nav.ejs', {token : token})  %>
+    <header>
+        <h1> Flights</h1>
+    </header>
+    <% flights.forEach((flight) => { %> 
+
+        <div class="flight">
+            <h2> <% flight.from %> </h2>
+            <p> <%  flight.to %> to </p>
+            <p> <%  flight.date %> </p>
+            <p> <%  flight.price %> € </p>
+            <p> <%  flight.company %> </p>
+
+            <button>
+                <a href="/api/flights/<% flight.id %>">Details of the flight</a>
+            </button>
+
+        </div>
+        
+        
+        
+        <% });  %>
+    
+</body>
+</html>
